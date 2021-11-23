@@ -1,0 +1,30 @@
+<!-- Author: Amritpal Singh-->
+
+<%- include('layouts/head'); %>
+    <%- include('layouts/header') %>
+        <%- include('layouts/nav'); -%>
+            <main class="allPages">
+                <h1 style="text-align: center; font-weight: bolder;">All Available Pages</h1>
+                <table class="table" style="text-align: center;">
+                    <thead>
+                        <tr>
+                            <th scope="col">Page</th>
+                            <th scope="col">Edit</th>
+                            <th scope="col">Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% for(var page of pages){ %>
+                            <tr>
+                                <td>
+                                    <%= page.pageTitle %>
+                                </td>
+                                <td><a href="/editPage/<%= page._id %>">Edit</a></td>
+                                <td><a href="/deletePage/<%= page._id %>">Delete</a></td>
+                            </tr>
+                            <% } %>
+                    </tbody>
+                </table>
+            </main>
+
+            <%- include('layouts/footer'); -%>

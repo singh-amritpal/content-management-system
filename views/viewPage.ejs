@@ -1,0 +1,21 @@
+<!--Auhtor: Amritpal Singh-->
+
+<%- include('layouts/head'); -%>
+    <%- include('layouts/header'); -%>
+        <%- include('layouts/homenav'); -%>
+            <main>
+                <section>
+                    <div class="pageData">
+                        <div class="pageImage">
+                            <img src="uploads/<%= pageImageName %>" alt="<%= pageImageName %>" style="width: 75%;">
+                        </div>
+                        <p class="pageTitle">
+                            <%= pageTitle %>
+                        </p>
+                        <p style="justify-content: end;">
+                            <%- pageDescription %>
+                        </p>
+                    </div>
+                </section>
+            </main>
+            <%- include('layouts/footer'); -%>

@@ -1,0 +1,11 @@
+<!--Auhtor: Amritpal Singh-->
+
+<nav class="navbar nav-pills nav-fill">
+    <a class="nav-item nav-link" href="/">Home</a>
+    <% for (var page of pages){ %>
+        <a class="nav-item nav-link" href="<%= page._id %>">
+            <%= page.pageTitle %>
+        </a>
+        <% }%>
+    <a class="nav-item nav-link" href="login">Login</a>
+</nav>
